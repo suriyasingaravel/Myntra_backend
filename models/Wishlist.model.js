@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-const cartSchema = new mongoose.Schema({
-  userID: { type: String, required: true },
+const wishListSchema = new mongoose.Schema({
+    userID: { type: String, required: true },
     image_url: { type: Array, required: true },
     brand: { type: String, required: true },
     subtext: { type: String, required: true },
@@ -14,6 +14,6 @@ const cartSchema = new mongoose.Schema({
     rating:{type:Number},
 });
 
-const CartModel = mongoose.model("cart", cartSchema);
+const WishListModel = mongoose.model("wishlist", wishListSchema);
 
-module.exports = { CartModel };
+module.exports = { WishListModel };
